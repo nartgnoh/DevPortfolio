@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Styles -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JavaScript -->
     <script defer src="app.js"></script>
     <!-- Favicons -->
@@ -17,21 +18,27 @@
 
 <body>
     <!-- Navbar -->
-    <nav>
-        <img src="assets/icons/initials.png">
-        <h1>Hong-Hue Tran | Software Developer</h1>
-        <ul class="navigation">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+
+    <div class="nav" id="navBar">
+        <div class="nav-container2">
+            <img src="assets/icons/initials.png">
+            <h2>Hong-Hue Tran | Software Developer</h2>
+        </div>
+        <div class="nav-container">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="navicon" onclick="navBar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
     <!-- About Section -->
     <section class="intro" id="about">
         <div class="about hidden">
-            <img src="assets/images/Headshot.jpg" alt="headshot" loading="lazy" class="about-img" />
+            <img src="assets/images/Headshot.jpg" alt="headshot" loading="lazy" class="img-about-card" />
             <div class="bio">
                 <h2 class="bio-title">About Me</h2>
                 <p class="bio-text">
@@ -48,7 +55,7 @@
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <h2 class="skill-header">My Top Skills</h2>
-        <div class="skills-wrapper gallery" id="skills">
+        <div class="skills-wrapper icon-gallery" id="skills">
             <a href="https://www.python.org/">
                 <div class="icon-card hidden"><img src="assets/icons/logos/python.png" alt="" loading="lazy"
                         class="icon" />
@@ -156,7 +163,7 @@
     <!-- Projects section -->
     <section class="projects" id="projects">
         <h2 class="projects-title">My Recent Projects</h2>
-        <div class="projects-container">
+        <div class="projects-container project-gallery">
             <div class="project-container project-card hidden">
                 <img src="assets/images/SmileBee.png" alt="BeeBot.py" loading="lazy" class="project-pic" />
                 <h3 class="project-title">BeeBot.py</h3>

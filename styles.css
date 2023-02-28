@@ -51,53 +51,111 @@ section {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 /* ------------------------- Navbar ------------------------- */
-nav {
-  position: sticky;
+.nav {
+  overflow: hidden;
+  position: fixed;
+  background-color: var(--bg-color);
   top: 0;
-  left: 0;
+  width: 100%;
   z-index: 1;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container {
+  float: right;
+}
+
+.nav-container2 {
+  float: left;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  left: 10px;
 }
 
-nav h1 {
+.nav img {
+  height: 3rem;
+  width: 3rem;
+  padding: 3px;
+}
+
+.nav h2 {
   color: var(--primary-color);
-  display: flex;
+  padding-left: 10px;
 }
 
-nav a {
+.nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 1.25rem 1.25rem;
+  text-decoration: none;
   color: var(--primary-color);
   transition: var(--transition);
 }
 
-nav a:hover {
+.nav a:hover {
   color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+  background-color: #d3fce6;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
-nav ul {
-  display: flex;
-  gap: 1.9rem;
+.nav .navicon {
+  display: none;
 }
 
-nav ul li {
-  font-weight: var(--bold-font);
+@media screen and (max-width: 1000px) {
+  .nav h2 {
+    display: none;
+  }
 }
 
-nav img {
-  height: 3rem;
-  width: 3rem;
-  display: inline-block;
-  vertical-align: top;
+@media screen and (max-width: 600px) {
+  .nav a {
+    display: none;
+  }
+
+  .nav a.navicon {
+    float: right;
+    display: block;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+  }
+
+  .nav.responsive .navicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav.responsive .nav-container {
+    float: left;
+    width: 100%;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav.responsive img {
+    display: none;
+  }
+}
+
 
 /* ------------------------- About section ------------------------- */
 .intro {
@@ -111,12 +169,20 @@ nav img {
   gap: 2.5rem;
   max-width: 68.75rem;
   margin: auto;
-
 }
 
 .about img {
   height: 15rem;
   width: 15rem;
+}
+
+.img-about-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
 }
 
 .bio {
@@ -134,6 +200,13 @@ nav img {
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    display: grid;
+    align-items: center;
+  }
 }
 
 /* ------------------------- Skills section ------------------------- */
@@ -157,10 +230,13 @@ nav img {
   height: 10rem;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
+.icon-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
 }
 
 .overlay {
@@ -170,6 +246,7 @@ nav img {
   left: 0;
   right: 0;
   opacity: 0;
+  border-radius: 11px;
   transition: .2s ease;
   background-color: var(--bg-color);
   ;
@@ -191,6 +268,24 @@ nav img {
   text-align: center;
 }
 
+.icon-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .icon-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ------------------------- Projects section ------------------------- */
 .projects {
   background-color: var(--bg-color);
@@ -204,7 +299,7 @@ nav img {
 }
 
 .projects-container {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -235,6 +330,31 @@ nav img {
 .project-logo {
   width: 15%;
   height: 15%;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* ------------------------- Contacts section ------------------------- */
@@ -315,23 +435,6 @@ nav img {
 }
 
 /* ------------------------- General (utilities) ------------------------- */
-.icon-card {
-  position: relative;
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
-}
-
-.project-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
-}
-
 /* Hidden Animation Section */
 .hidden {
   opacity: 0;
