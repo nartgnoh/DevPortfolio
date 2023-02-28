@@ -1,342 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- JavaScript -->
+    <script defer src="app.js"></script>
     <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/initials.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/initials.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/initials.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/initials.png" />
+</head>
+<title>Hong-Hue Tran | Software Developer</title>
 
-    <!-- Animate CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <title>Hong-Hue Tran | Software Developer</title>
-  </head>
-
-  <body>
+<body>
     <!-- Navbar -->
     <nav>
-      <img src="assets/icons/initials.png">
-      <h1>Hong-Hue Tran | Software Developer</h1>
-      <ul class="navigation">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="burger-menu" id="burger-menu">
-        <ion-icon class="bars" name="menu-outline"></ion-icon>
-        <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
-      </button>
+        <img src="assets/icons/initials.png">
+        <h1>Hong-Hue Tran | Software Developer</h1>
+        <ul class="navigation">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
     </nav>
-    
-    <p> </p>
-    <br>
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-      <img
-        src="assets/images/Headshot.jpg"
-        alt="headshot"
-        loading="lazy"
-        class="hero-img"
-      />
-      <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About Me</h2>
-        <p class="bio-text">
-          My name is Hong-Hue Tran, but you can call me Hong! <br>
-          I am an ambitious individual with experience in software development ranging in fields such as full-stack development and game development. 
-          I have a great desire to develop and implement software that is simple, elegant and useful to help people's lives with new or better ways to approach issues. 
-          My main interests are in technology, art, games, and learning new things!
-        </p>
-      </div>
-    </section>
-    <br>
-    <!-- More about -->
-    <section class="more-about">
-      <h2>Experience</h2>
-      <p>
 
-      </p>
+    <!-- About Section -->
+    <section class="intro" id="about">
+        <div class="about hidden">
+            <img src="assets/images/Headshot.jpg" alt="headshot" loading="lazy" class="about-img" />
+            <div class="bio">
+                <h2 class="bio-title">About Me</h2>
+                <p class="bio-text">
+                    My name is Hong-Hue Tran, but you can call me Hong! <br>
+                    I am an ambitious individual with experience in software development ranging in fields such as
+                    full-stack development and game development.
+                    I have a great desire to develop and implement software that is simple, elegant and useful to help
+                    people's lives with new or better ways to approach issues.
+                    My main interests are in technology, art, games, and learning new things!
+                </p>
+            </div>
     </section>
 
-    <!-- Skills section -->
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-      <h2 class="skill-header">My Top Skills</h2>
+        <h2 class="skill-header">My Top Skills</h2>
+        <div class="skills-wrapper gallery" id="skills">
+            <a href="https://www.python.org/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/python.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Python</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://elixir-lang.org/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/elixir.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Elixir</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.phoenixframework.org/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/phoenix.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Phoenix Framework</div>
+                    </div>
+                </div>
+            </a>
+            <a
+                href="https://www.google.com/search?q=c%23&sxsrf=AJOqlzUneABU-V-HMl__446ey-1hax_l-w%3A1677365425585&ei=sZD6Y4y0I8ieptQPr5-l0AE&ved=0ahUKEwjM0OaS4bH9AhVIj4kEHa9PCRoQ4dUDCA8&uact=5&oq=c%23&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIHCAAQsQMQQzILCAAQgAQQsQMQgwEyCAgAEIAEELEDMgsIABCABBCxAxCDATIFCAAQgAQyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQsQMyCAgAEIAEELEDOgoIABBHENYEELADOgcIABCwAxBDOgQIABBDOgoILhDHARDRAxBDOhEILhCABBCxAxCDARDHARDRAzoOCC4QgAQQsQMQxwEQ0QNKBAhBGABQjQVY6AxglA9oAXAAeACAAXqIAd0BkgEDMS4xmAEAoAEByAEKwAEB&sclient=gws-wiz-serp">
+                <div class="icon-card hidden"><img src="assets/icons/logos/csharp.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">C#</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.javascript.com/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/icons8-javascript.svg" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">JavaScript</div>
+                    </div>
+                </div>
+            </a>
+            <a
+                href="https://www.google.com/search?q=html5&oq=html5&aqs=chrome..69i57j0i67i433j0i67l3j0i67i433l3j0i20i263i512j0i433i512.2084j0j4&sourceid=chrome&ie=UTF-8">
+                <div class="icon-card hidden"><img src="assets/icons/logos/icons8-html-5.svg" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">HTML5</div>
+                    </div>
+                </div>
+            </a>
+            <a
+                href="https://www.google.com/search?q=css3&sxsrf=AJOqlzX7GoO9mG1v1-BXAhfIL3sheHyKZQ%3A1677365466319&ei=2pD6Y-qKE6CjptQP-p-c2A4&ved=0ahUKEwjq35ym4bH9AhWgkYkEHfoPB-sQ4dUDCA8&uact=5&oq=css3&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECAAQQzIKCAAQgAQQFBCHAjIECAAQQzIECAAQQzIECAAQQzIFCAAQgAQyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6EQguEIAEELEDEIMBEMcBENEDOg4ILhCABBCxAxDHARDRAzoHCAAQsQMQQ0oECEEYAFAAWKsKYPsSaABwAXgAgAFriAHuApIBAzMuMZgBAKABAcABAQ&sclient=gws-wiz-serp">
+                <div class="icon-card hidden"><img src="assets/icons/logos/icons8-css3.svg" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">CSS3</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://git-scm.com/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/icons8-git.svg" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Git</div>
+                    </div>
+                </div>
+            </a>
 
-      <div class="skills-wrapper">
-        <div class="first-set animate__animated animate__pulse">
-          <a href="https://www.python.org/"><img
-            src="assets/icons/logos/python.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://elixir-lang.org/"><img
-            src="assets/icons/logos/elixir.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://www.phoenixframework.org/"><img
-          src="assets/icons/logos/phoenix.png"
-          alt=""
-          loading="lazy"
-          class="icon icon-card"
-          /></a>
-          <a href="https://www.google.com/search?q=c%23&sxsrf=AJOqlzUneABU-V-HMl__446ey-1hax_l-w%3A1677365425585&ei=sZD6Y4y0I8ieptQPr5-l0AE&ved=0ahUKEwjM0OaS4bH9AhVIj4kEHa9PCRoQ4dUDCA8&uact=5&oq=c%23&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIHCAAQsQMQQzILCAAQgAQQsQMQgwEyCAgAEIAEELEDMgsIABCABBCxAxCDATIFCAAQgAQyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQsQMyCAgAEIAEELEDOgoIABBHENYEELADOgcIABCwAxBDOgQIABBDOgoILhDHARDRAxBDOhEILhCABBCxAxCDARDHARDRAzoOCC4QgAQQsQMQxwEQ0QNKBAhBGABQjQVY6AxglA9oAXAAeACAAXqIAd0BkgEDMS4xmAEAoAEByAEKwAEB&sclient=gws-wiz-serp"><img
-            src="assets/icons/logos/csharp.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
+            <a href="https://www.linux.org/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/linux.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Linux OS</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.docker.com/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/docker.webp" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Docker</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://cloud.google.com/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/GCP.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Google Cloud Platform</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://unity.com/">
+                <div class="icon-card hidden"><img src="assets/icons/logos/unity.png" alt="" loading="lazy"
+                        class="icon" />
+                    <div class="overlay">
+                        <div class="text">Unity</div>
+                    </div>
+                </div>
+            </a>
         </div>
-
-        <div class="second-set animate__animated animate__pulse">
-            <a href="https://www.javascript.com/"><img
-            src="assets/icons/logos/icons8-javascript.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://www.google.com/search?q=html5&oq=html5&aqs=chrome..69i57j0i67i433j0i67l3j0i67i433l3j0i20i263i512j0i433i512.2084j0j4&sourceid=chrome&ie=UTF-8"><img
-            src="assets/icons/logos/icons8-html-5.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://www.google.com/search?q=css3&sxsrf=AJOqlzX7GoO9mG1v1-BXAhfIL3sheHyKZQ%3A1677365466319&ei=2pD6Y-qKE6CjptQP-p-c2A4&ved=0ahUKEwjq35ym4bH9AhWgkYkEHfoPB-sQ4dUDCA8&uact=5&oq=css3&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECAAQQzIKCAAQgAQQFBCHAjIECAAQQzIECAAQQzIECAAQQzIFCAAQgAQyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6EQguEIAEELEDEIMBEMcBENEDOg4ILhCABBCxAxDHARDRAzoHCAAQsQMQQ0oECEEYAFAAWKsKYPsSaABwAXgAgAFriAHuApIBAzMuMZgBAKABAcABAQ&sclient=gws-wiz-serp"><img
-            src="assets/icons/logos/icons8-css3.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://git-scm.com/"><img
-            src="assets/icons/logos/icons8-git.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-        </div>
-
-        <div class="third-set animate__animated animate__pulse">
-          <a href="https://www.linux.org/"><img
-          src="assets/icons/logos/linux.png"
-          alt=""
-          loading="lazy"
-          class="icon icon-card"
-        /></a>
-          <a href="https://www.docker.com/"><img
-            src="assets/icons/logos/docker.webp"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://cloud.google.com/"><img
-            src="assets/icons/logos/GCP.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          /></a>
-          <a href="https://unity.com/"><img
-          src="assets/icons/logos/unity.png"
-          alt=""
-          loading="lazy"
-          class="icon icon-card"
-        /></a>
-
-        </div>
-      </div>
     </section>
+
 
     <!-- Projects section -->
     <section class="projects" id="projects">
-      <h2 class="projects-title">My Recent Projects</h2>
-      <div class="projects-container">
-        <div class="project-container project-card">
-          <a href="https://discord.gg/tbvqkUn59F"><img
-            src="assets/images/SmileBee.png"
-            alt="BeeBot.py"
-            loading="lazy"
-            class="project-pic"
-          /></a>
-          <h3 class="project-title">BeeBot.py</h3>
-          <h4 class="project-title">Programmer</h4>
-          <p class="project-details">
-          A bee-themed Discord.py bot who helps with organizing game nights, plays games, plays music and much more! <br><br>
-          This discord bot utilizes the Riot API, Tenor API and OpenAI API to create engaging and interactive discord servers. <br><br>
-          BeeBot is run fully on the cloud (GCP).
-          </p>
-          <a href="https://discord.gg/tbvqkUn59F" target="_blank" class="project-link">Check Out the BeeBot.py Playground!</a>
-          <br><hr>
-          <a href="https://github.com/nartgnoh/BeeBot.py" target="_blank" class="project-link">GitHub Link</a>
+        <h2 class="projects-title">My Recent Projects</h2>
+        <div class="projects-container">
+            <div class="project-container project-card hidden">
+                <a href="https://discord.gg/tbvqkUn59F"><img src="assets/images/SmileBee.png" alt="BeeBot.py"
+                        loading="lazy" class="project-pic" /></a>
+                <h3 class="project-title">BeeBot.py</h3>
+                <h4 class="project-title">Programmer</h4>
+                <p class="project-details">
+                    A bee-themed Discord bot who organizes game nights, plays games, plays music and much
+                    more! <br><br>
+                    Utilizing Riot, Tenor and OpenAI APIs to create an engaging and interactive
+                    discord experience. <br>
+                    BeeBot is run fully on the cloud.
+                </p>
+                <a href="https://discord.gg/tbvqkUn59F" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/discord.png" alt="Discord" loading="lazy" class="project-logo" />
+                </a>
+                <a href="https://github.com/nartgnoh/BeeBot.py" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/github.webp" alt="Github" loading="lazy" class="project-logo" />
+                </a>
+            </div>
+            <div class="project-container project-card hidden">
+                <a href="https://cvu232.itch.io/beef-daddy"><img src="assets/images/Moo.png" alt="Moo." loading="lazy"
+                        class="project-pic" /></a>
+                <h3 class="project-title">Moo.</h3>
+                <h4 class="project-title">Gameplay Programmer</h4>
+                <p class="project-details">
+                    "Moo." <br> (otherwise known as Beef Daddy) <br> is a 3D puzzle horror game project created in
+                    collaboration with <br>6 University students. <br><br>
+                    Your objective is to find the code to unlock the door and escape before HE catches you!
+                    A thrilling chase with a sentient mad cow that will leave you wanting more!
+                </p>
+                <a href="https://cvu232.itch.io/beef-daddy" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/itchio.svg" alt="ItchIO" loading="lazy" class="project-logo" />
+                </a>
+                <a href="https://github.com/ramishawasim/DiscoDeco" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/github.webp" alt="Github" loading="lazy" class="project-logo" />
+                </a>
+            </div>
+            <div class="project-container project-card hidden">
+                <a href="https://cvu232.itch.io/marble-madness-remake"><img src="assets/images/marbleMadness.png"
+                        alt="marble-madness-remake" loading="lazy" class="project-pic" /></a>
+                <h3 class="project-title">Marble Madness Remake</h3>
+                <h4 class="project-title">Lead Programmer</h4>
+                <p class="project-details">
+                    "Marble Madness Remake" <br> is a 2.5D marble game project project created in collaboration with
+                    <br>5 University students. <br><br>
+                    An unofficial successor to the classic 1984 Atari game, Marble Madness; with
+                    4 new levels with newly enhanced and psychedelic graphics. <br><br>
+                    Can you beat the highest score?
+                </p>
+                <a href="https://cvu232.itch.io/marble-madness-remake" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/itchio.svg" alt="ItchIO" loading="lazy" class="project-logo" />
+                </a>
+                <a href="https://github.com/nartgnoh/Marble-Madness-REMAKE" target="_blank" class="project-link">
+                    <img src="assets/icons/logos/github.webp" alt="Github" loading="lazy" class="project-logo" />
+                </a>
+            </div>
         </div>
-        <div class="project-container project-card">
-          <a href="https://cvu232.itch.io/beef-daddy"><img
-            src="assets/images/Moo.png"
-            alt="Moo."
-            loading="lazy"
-            class="project-pic"
-          /></a>
-          <h3 class="project-title">Moo.</h3>
-          <h4 class="project-title">Gameplay Programmer</h4>
-          <p class="project-details">
-            "Moo." <br> (otherwise known as Beef Daddy) <br> is a 3D puzzle horror game project created in collaboration with <br>6 University students. <br><br>
-            Your objective is to find the code to unlock the door and escape before HE catches you!
-            A thrilling chase with a sentient mad cow that will leave you wanting more!
-          </p>
-          <a href="https://cvu232.itch.io/beef-daddy" target="_blank" class="project-link">Check Out the Game!</a>
-          <br><hr>
-          <a href="https://github.com/ramishawasim/DiscoDeco" target="_blank" class="project-link">GitHub Link</a>
-        </div>
-        <div class="project-container project-card">
-          <a href="https://cvu232.itch.io/marble-madness-remake"><img
-            src="assets/images/marbleMadness.png"
-            alt="marble-madness-remake"
-            loading="lazy"
-            class="project-pic"
-          /></a>
-          <h3 class="project-title">Marble Madness Remake</h3>
-          <h4 class="project-title">Lead Programmer</h4>
-          <p class="project-details">
-            "Marble Madness Remake" <br> is a 2.5D marble game project project created in collaboration with <br>5 University students. <br><br>
-            An unofficial successor to the classic 1984 Atari game, Marble Madness; with 
-            4 new levels with newly enhanced and psychedelic graphics. <br><br>
-            Can you beat the highest score?
-          </p>
-          <a href="https://cvu232.itch.io/marble-madness-remake" target="_blank" class="project-link">Check Out the Game!</a>
-          <br><hr>
-          <a href="https://github.com/nartgnoh/Marble-Madness-REMAKE" target="_blank" class="project-link">GitHub Link</a>
-        </div>
-      </div>
     </section>
 
     <!-- Contact section -->
     <section class="contact" id="contact">
-      <h2>Get In Touch With Me</h2>
-      <div class="contact-form-container">
-        <div class="contact-form">
-          <form action="https://formspree.io/f/xyylnggw" method="POST">
-            <div class="form-control">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="sender-name"
-                placeholder="Enter Your Name"
-                class="input-field"
-                required
-              />
+        <h2>Get In Touch With Me!</h2>
+        <div class="contact-form-container hidden">
+            <div class="contact-form">
+                <form action="https://formspree.io/f/myyajkya" method="POST">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="sender-name" placeholder="Enter Your Name"
+                            class="input-field" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="sender-email" placeholder="Enter Your Email"
+                            class="input-field" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message</label>
+                        <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+                            class="input-field" required></textarea>
+                    </div>
+                    <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+                </form>
             </div>
-            <div class="form-control">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="sender-email"
-                placeholder="Enter Your Email"
-                class="input-field"
-                required
-              />
-            </div>
-            <div class="form-control">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                cols="60"
-                rows="10"
-                placeholder="Enter Your Message"
-                name="message"
-                class="input-field"
-                required
-              ></textarea>
-            </div>
-            <input
-              type="submit"
-              value="Submit"
-              id="submit-btn"
-              class="submit-btn"
-            />
-          </form>
         </div>
-      </div>
     </section>
 
     <!-- Social accounts - Fixed to the right -->
     <div class="socials">
-      <a href="https://www.linkedin.com/in/hong-hue-tran/" target="_blank"
-        ><img
-          src="assets/icons/gifs/icons-linkedin.gif"
-          alt="Linkedin"
-          loading="lazy"
-          class="socicon"
-      /></a>
-      <a href="https://github.com/nartgnoh" target="_blank"
-        ><img 
-          src="assets/icons/gifs/icons-github.gif" 
-          alt="Github" 
-          class="socicon"
-      /></a>
-      <a href="https://nartgnoh1.itch.io/" target="_blank"
-      ><img 
-        src="assets/icons/gifs/icons-itch.gif" 
-        alt="Itch.io" 
-        class="socicon"
-    /></a>
-      <a href="https://www.instagram.com/nart.gnoh/" target="_blank"
-      ><img
-        src="assets/icons/gifs/icons-instagram.gif"
-        alt="Instagram"
-        loading="lazy"
-        class="socicon"
-    /></a>
+        <a href="https://www.linkedin.com/in/hong-hue-tran/" target="_blank"><img
+                src="assets/icons/gifs/icons-linkedin.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
+        <a href="https://github.com/nartgnoh" target="_blank"><img src="assets/icons/gifs/icons-github.gif" alt="Github"
+                class="socicon" /></a>
+        <a href="https://nartgnoh1.itch.io/" target="_blank"><img src="assets/icons/gifs/icons-itch.gif" alt="Itch.io"
+                class="socicon" /></a>
+        <a href="https://www.instagram.com/nart.gnoh/" target="_blank"><img src="assets/icons/gifs/icons-instagram.gif"
+                alt="Instagram" loading="lazy" class="socicon" /></a>
     </div>
 
-    <!-- Scroll to top -->
-    <i class="scroll-up" id="scroll-up"
-      ><img
-        src="assets/icons/gifs/icons-upward-arrow.gif"
-        class="socicon up-arrow"
-        alt=""
-    /></i>
+</body>
 
-    <!-- Footer section -->
-    <footer>
-      <!-- <p class="copy">&copy; Copyright 2021</p>
-      <p class="copy">
-        Built with &#x2661; by
-        <a href="https://twitter.com/koladechris" target="_blank"
-          >Kolade Chris (Ksound)</a
-        >
-      </p> -->
-    </footer>
-
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
 </html>
