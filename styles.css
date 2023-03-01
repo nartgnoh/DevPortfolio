@@ -52,6 +52,7 @@ section {
   place-items: center;
   align-content: center;
   min-height: 80vh;
+  min-width: 100vw;
 }
 
 /* ------------------------- Navbar ------------------------- */
